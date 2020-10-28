@@ -1,0 +1,66 @@
+@import '../global/mixin.scss';
+
+
+.top-header{
+    position: fixed;
+    left: 250px;
+    width: calc(100% - 280px);
+    top: 0;
+    height: 35px;
+    background-color: #fff;
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    border-radius: 6px;
+    justify-content: space-between;
+    .abc{
+        color: red;
+    }
+}
+.user-info{
+    display: flex;
+  .user-profile{
+        li{
+            position: relative;
+            @include transition(all 4s  ease-in-out);
+      
+            a{
+                display: flex;
+                img{
+
+                }
+            }
+        .user-profile-detail{
+            display: none;
+            position: absolute;
+            @include transition(all 4s  ease-in-out);
+            height: 0;
+            top: 0;
+            li{
+                a{
+
+                }
+            }
+        }
+        &:hover{
+            @include transition(all 4s  ease-in-out);
+            .user-profile-detail{
+                display: flex;
+                position: absolute;
+                top: 85px;
+                width: 200px;
+                height: 450px;
+                background-color: #ededed;
+            
+
+                li{
+                    a{
+    
+                    }
+                }
+            }
+        }    
+    }
+   
+  }  
+}
